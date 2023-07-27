@@ -1,7 +1,7 @@
 # vite-plugin-vue-component-name-checker
 
-A vite pulgin to check if name of a component incorrect.
-Currently only supporting checking name in `script` attrs or `defineOptions`
+A vite plugin to check if name of a component incorrect.
+Currently only support checking name in `script` attrs or `defineOptions`
 
 For example
 
