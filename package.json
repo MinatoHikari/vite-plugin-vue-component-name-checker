@@ -5,6 +5,7 @@
     "main": "dist/index.mjs",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
+    "type": "module",
     "scripts": {
         "build": "tsc --build tsconfig.build.json"
     },
