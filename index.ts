@@ -3,8 +3,8 @@ import { sep } from 'path';
 import { parse } from '@vue/compiler-sfc';
 import { createLogger } from 'vite';
 import { parse as babelParse } from '@babel/parser';
-import traverse from '@babel/traverse';
 import camelcase from 'camelcase';
+// import traverse from '@babel/traverse';
 
 export type Options = {
     dir: string;
@@ -56,6 +56,8 @@ export default function VueComponentNameChecker(options: Options) {
                         sourceType: 'module',
                         plugins: ['jsx'],
                     });
+
+                    const traverse = await (await import('@babel/traverse')).default;
 
                     traverse(ast, {
                         CallExpression(path) {
