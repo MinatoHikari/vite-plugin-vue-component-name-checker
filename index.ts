@@ -4,6 +4,7 @@ import { parse } from '@vue/compiler-sfc';
 import { createLogger } from 'vite';
 import { parse as babelParse } from '@babel/parser';
 import traverse from '@babel/traverse';
+import camelcase from 'camelcase';
 
 export type Options = {
     dir: string;
@@ -32,7 +33,6 @@ export default function VueComponentNameChecker(options: Options) {
                     return !id.includes(path);
                 })
             ) {
-                const camelcase = (await import('camelcase')).default;
                 let nameStr = id.split(prefix)[1];
 
                 if (regular) {
