@@ -1,11 +1,9 @@
 {
     "name": "vite-plugin-vue-component-name-checker",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "",
-    "main": "dist/index.mjs",
-    "module": "dist/index.mjs",
+    "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "type": "module",
     "scripts": {
         "build": "tsc --build tsconfig.build.json"
     },
@@ -21,6 +19,10 @@
         "camelcase": "^7.0.1",
         "prettier": "^3.0.0",
         "typescript": "^5.1.6",
-        "vite": "^4.4.7"
+        "vite": "^4.4.7",
+        "vite-plugin-dts": "^3.3.1"
+    },
+    "volta": {
+        "node": "20.5.0"
     }
 }

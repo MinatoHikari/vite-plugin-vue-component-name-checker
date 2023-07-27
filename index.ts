@@ -1,5 +1,5 @@
-import { readFileSync } from 'node:fs';
-import { sep } from 'node:path';
+import { readFileSync } from 'fs';
+import { sep } from 'path';
 import { parse } from '@vue/compiler-sfc';
 import { createLogger } from 'vite';
 import { parse as babelParse } from '@babel/parser';
