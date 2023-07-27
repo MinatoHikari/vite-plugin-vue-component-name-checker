@@ -51,7 +51,7 @@ export default function VueComponentNameChecker(options: Options) {
                 if (content) {
                     const ast = babelParse(content, {
                         sourceType: 'module',
-                        plugins: ['jsx'],
+                        plugins: ['jsx', 'typescript'],
                     });
 
                     traverse(ast, {
