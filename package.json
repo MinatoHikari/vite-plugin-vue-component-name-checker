@@ -1,11 +1,10 @@
 {
     "name": "vite-plugin-vue-component-name-checker",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
+    "main": "dist/index.umd.js",
     "types": "dist/index.d.ts",
-    "type": "module",
+    "type": "commonjs",
     "scripts": {
         "build": "tsc --build tsconfig.build.json",
         "vite-build": "vite build"
