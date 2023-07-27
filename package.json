@@ -1,14 +1,17 @@
 {
     "name": "vite-plugin-vue-component-name-checker",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "",
     "main": "dist/index.js",
+    "module": "dist/index.js",
     "types": "dist/index.d.ts",
+    "type": "module",
     "scripts": {
-        "build": "tsc --build tsconfig.build.json"
+        "build": "tsc --build tsconfig.build.json",
+        "vite-build": "vite build"
     },
     "keywords": [],
-    "author": "",
+    "author": "MinatoHikari",
     "license": "ISC",
     "devDependencies": {
         "@babel/parser": "^7.22.7",
