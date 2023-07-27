@@ -1,6 +1,6 @@
 {
     "name": "vite-plugin-vue-component-name-checker",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "description": "",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -24,6 +24,13 @@
         "typescript": "^5.1.6",
         "vite": "^4.4.7",
         "vite-plugin-dts": "^3.3.1"
+    },
+    "peerDependencies": {
+        "camelcase": "^7.0.1",
+        "vite": "^4.4.7",
+        "@babel/traverse": "^7.22.8",
+        "@babel/parser": "^7.22.7",
+        "@vue/compiler-sfc": "^3.3.4"
     },
     "volta": {
         "node": "20.5.0"
