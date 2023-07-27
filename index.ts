@@ -57,7 +57,7 @@ export default function VueComponentNameChecker(options: Options) {
                         plugins: ['jsx'],
                     });
 
-                    const traverse = await (await import('@babel/traverse')).default;
+                    const traverse = (await import('@babel/traverse')).default;
 
                     traverse(ast, {
                         CallExpression(path) {
