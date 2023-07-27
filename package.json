@@ -1,0 +1,23 @@
+{
+    "name": "vite-plugin-vue-component-name-checker",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc --build tsconfig.build.json"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/parser": "^7.22.7",
+        "@babel/traverse": "^7.22.8",
+        "@types/babel__traverse": "^7.20.1",
+        "@types/node": "^20.4.5",
+        "@vue/compiler-sfc": "^3.3.4",
+        "camelcase": "^7.0.1",
+        "prettier": "^3.0.0",
+        "typescript": "^5.1.6",
+        "vite": "^4.4.7"
+    }
+}
