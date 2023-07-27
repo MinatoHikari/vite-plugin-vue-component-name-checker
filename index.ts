@@ -3,8 +3,8 @@ import { sep } from 'path';
 import { parse } from '@vue/compiler-sfc';
 import { createLogger } from 'vite';
 import { parse as babelParse } from '@babel/parser';
-import camelcase from 'camelcase';
-// import traverse from '@babel/traverse';
+import pascalCase from 'just-pascal-case';
+import traverse from '@babel/traverse';
 
 export type Options = {
     dir: string;
@@ -42,10 +42,7 @@ export default function VueComponentNameChecker(options: Options) {
                     else nameStr = nameStr.split('.vue')[0];
                 }
 
-                const idComponentName = camelcase(nameStr.replaceAll('/', '-'), {
-                    pascalCase: true,
-                    preserveConsecutiveUppercase: true,
-                });
+                const idComponentName = pascalCase(nameStr.replaceAll('/', '-'));
                 const buffer = readFileSync(originId);
                 const parseResult = parse(String(buffer));
                 // console.log(parseResult.descriptor.scriptSetup);
@@ -56,8 +53,6 @@ export default function VueComponentNameChecker(options: Options) {
                         sourceType: 'module',
                         plugins: ['jsx'],
                     });
-
-                    const traverse = (await import('@babel/traverse')).default;
 
                     traverse(ast, {
                         CallExpression(path) {

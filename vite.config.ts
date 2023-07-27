@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import { nodePolyfills } from 'vite-plugin-node-polyfills';
+// import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import * as path from 'path';
 
 // https://vitejs.dev/config/
@@ -44,9 +44,9 @@ export default defineConfig({
             tsconfigPath: 'tsconfig.build.json',
             insertTypesEntry: true,
         }),
-        nodePolyfills({
-            // Whether to polyfill `node:` protocol imports.
-            // protocolImports: true,
-        }),
+        // nodePolyfills({
+        // Whether to polyfill `node:` protocol imports.
+        // protocolImports: true,
+        // }),
     ],
 });

@@ -1,11 +1,9 @@
 {
     "name": "vite-plugin-vue-component-name-checker",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "description": "",
     "main": "dist/index.js",
-    "module": "dist/index.js",
     "types": "dist/index.d.ts",
-    "type": "module",
     "scripts": {
         "build": "tsc --build tsconfig.build.json",
         "vite-build": "vite build"
@@ -14,25 +12,23 @@
     "author": "MinatoHikari",
     "license": "ISC",
     "devDependencies": {
-        "@babel/parser": "^7.22.7",
-        "@babel/traverse": "^7.22.8",
         "@types/babel__traverse": "^7.20.1",
         "@types/node": "^20.4.5",
-        "@vue/compiler-sfc": "^3.3.4",
-        "camelcase": "^7.0.1",
         "prettier": "^3.0.0",
         "typescript": "^5.1.6",
         "vite": "^4.4.7",
         "vite-plugin-dts": "^3.3.1"
     },
     "peerDependencies": {
-        "camelcase": "^7.0.1",
-        "vite": "^4.4.7",
-        "@babel/traverse": "^7.22.8",
-        "@babel/parser": "^7.22.7",
-        "@vue/compiler-sfc": "^3.3.4"
+        "vite": "^4.4.7"
     },
     "volta": {
         "node": "20.5.0"
+    },
+    "dependencies": {
+        "@babel/parser": "^7.22.7",
+        "@babel/traverse": "^7.22.8",
+        "@vue/compiler-sfc": "^3.3.4",
+        "just-pascal-case": "^3.2.0"
     }
 }
